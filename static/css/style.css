@@ -5,15 +5,15 @@
 /* Fonts */
 @font-face {
     font-family: 'Dancing Script';
-    src: url("/static/fonts/fonts-family/SVN-DancingScript.woff");
+    src: url("/fonts/fonts-family/SVN-DancingScript.woff");
 }
 @font-face {
     font-family: 'Avenb';
-    src: url("/static/fonts/fonts-family/AvenirNext-Bold.woff");
+    src: url("/fonts/fonts-family/AvenirNext-Bold.woff");
 }
 @font-face {
     font-family: 'Avenm';
-    src: url("/static/fonts/fonts-family/AvenirNext-Medium.woff");
+    src: url("/fonts/fonts-family/AvenirNext-Medium.woff");
 }
 /* Begin Common */
 .flex {
@@ -384,7 +384,7 @@
     background-color: #fff;
 }
 .filter .menu {
-    background: url("/static/img/gmn.svg") center no-repeat; 
+    background: url("/img/gmn.svg") center no-repeat; 
     background-size: 50% 100%;
     justify-content: center;
     margin-top: 60px;
