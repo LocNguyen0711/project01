@@ -384,7 +384,7 @@
     background-color: #fff;
 }
 .filter .menu {
-    background: url("../static/img/gmn.svg") center no-repeat; 
+    background: url("../css/img/gmn.svg") center no-repeat; 
     background-size: 50% 100%;
     justify-content: center;
     margin-top: 60px;
