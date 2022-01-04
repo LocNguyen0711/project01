@@ -632,5 +632,9 @@
     .filter .menu ul li ul li {
         margin: 20px 0;
     }
+    .filter .menu ul img {
+        left: 0;
+        right: 0;
+    }
     
 }
