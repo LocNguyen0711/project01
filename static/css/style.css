@@ -369,6 +369,14 @@
     background-color: var(--content-color);
 }
 /* Menus */
+.monchienxao,
+.montron {
+    display: none;
+}
+.monchienxao.open,
+.montron.open {
+    display: flex;
+}
 .filter .menus {
     position: relative;
     width: 100%;

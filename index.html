@@ -127,17 +127,17 @@
                 </div>
                 <div class="filter">
                     <span class="flex yCenter mglrAuto choose">
-                        <select  spellcheck="false" data-ms-editor="true" class="textNodecor chose">                   
-                            <option value="01">Món trộn</option>
-                            <option value="02">Món chiên & xào</option>
-                            <option value="03">Món khai vị</option>
-                            <option value="04">Món canh</option>
-                            <option value="05">Cơm chiên & mì</option>
-                            <option value="06">Cà ri và lẩu</option>
-                            <option value="07">Món chay</option>
-                            <option value="08">Món ăn kèm thêm</option>
-                            <option value="09">Tráng miệng và đồ uống Thái</option>
-                            <option value="10">Soft drink and Bear</option>       
+                        <select  spellcheck="false" data-ms-editor="true" class="textNodecor chose" onchange="menuChanged(this)">                   
+                            <option value="montron">Món trộn</option>
+                            <option value="monchienxao">Món chiên & xào</option>
+                            <option value="monkhaivi">Món khai vị</option>
+                            <option value="moncanh">Món canh</option>
+                            <option value="comchien">Cơm chiên & mì</option>
+                            <option value="carilau">Cà ri và lẩu</option>
+                            <option value="monchay">Món chay</option>
+                            <option value="monankem">Món ăn kèm thêm</option>
+                            <option value="trangmiengvadouongthai">Tráng miệng và đồ uống Thái</option>
+                            <option value="softdrinkbear">Soft drink and Bear</option>       
                         </select>
                         <button class="btnshowlist" type="button"><i class="ti-angle-double-down"></i></button>
                     </span>
@@ -271,6 +271,91 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="flex menu monchienxao">
+                            <ul class="left">
+                                <li>
+                                    <span class="name" href="#">1. Đậu đũa xào dầu hào</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#">50.000 đ</span>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">2. Sốt chua ngọt và cơm</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#"></span>
+                                    <ul class="type">
+                                        <li>
+                                            <span class="name" href="#">Sườn heo</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">95.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Tôm</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">95.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Cá chiên xù</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">95.000 đ</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">3. Rau muống xào</span>
+                                    <ul class="type">
+                                        <li>
+                                            <span class="name" href="#">Tôm khô mắm ruốc  </span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">75.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Tỏi</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">40.000 đ</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">4. Rau muống xào</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#">95.000 đ</span>
+                                </li>
+                            </ul>
+                            <ul class="right">
+                                <li>
+                                    <span class="name" href="#">5. Xào lá Basil</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#"></span>  
+                                    <ul class="type">
+                                        <li>
+                                            <span class="name" href="#">Heo</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">85.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Gà</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">85.000 đ</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">6. Cá chiên mắm</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#">160.000 đ</span>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">7. Khoai tây và cá tẩm bột chiên giòn</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#">90.000 đ</span>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">7. Khoai tây và cá tẩm bột chiên giòn</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#">70.000 đ</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -290,6 +375,7 @@
     // Consts
     const menuBar = document.querySelector('.menu-icon')
     const menuMontron = document.querySelector('.montron') 
+    const menuMonchienxao = document.querySelector('.monchienxao')
     const menuChoseDisplay = document.querySelectorAll('.menu')
     const menuModal = document.querySelector('.menu-modal')
     const menuItems = document.querySelector('.menu-items')
@@ -306,6 +392,17 @@
         menuModal.classList.remove("open")
     })
     // Chosse 
+    menuMontron.classList.add("open")
+    function menuChanged(obj){
+        if(obj.value == 'montron'){
+            menuMonchienxao.classList.remove("open")
+            menuMontron.classList.add("open")
+        }
+        else if(obj.value == 'monchienxao'){
+            menuMontron.classList.remove("open")
+            menuMonchienxao.classList.add("open")
+        }
+    }
 </script>
 
 </html>
