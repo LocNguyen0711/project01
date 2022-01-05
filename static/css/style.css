@@ -109,9 +109,9 @@
 }
 /* Menu minisize */
 .menu-modal,
-#heading .menu,
+#heading .menu-icon,
 .nav-mini .menu-items,
-#heading .menu.open .two,
+#heading .menu-icon.open .two,
 .nav-mini > a {
     display: none;
  }
@@ -122,46 +122,46 @@
     text-transform: uppercase;
 }
 /* Position of Menu Icon */
-#heading .menu {
+#heading .menu-icon {
     position: absolute;
     right: 10px;
     width: 40px;
     height: 40%;
 }
 /* Menu Icon */
-#heading .menu .one,
-#heading .menu .two,
-#heading .menu .three {
+#heading .menu-icon .one,
+#heading .menu-icon .two,
+#heading .menu-icon .three {
     position: absolute;
     width: 40px;
     height: 7px;
     background-color: var(--content-color);
 }
 .nav-mini a,
-#heading .menu,
-#heading .menu .two{
+#heading .menu-icon,
+#heading .menu-icon .two{
     top: 50%;
     transform: translateY(-50%);
 }
-#heading .menu .one{
+#heading .menu-icon .one{
     top: 0;
 }
-#heading .menu .three{
+#heading .menu-icon .three{
     bottom: 0;
 }
-#heading .menu:hover {
+#heading .menu-icon:hover {
     cursor: pointer;
 }
-#heading .menu.open {
+#heading .menu-icon.open {
     position: absolute;
     right: 200px;
 }
-#heading .menu.open .one {
+#heading .menu-icon.open .one {
     top: 50%;
     animation: menuIcon-trans1 1s ease ;
     transform: rotate(-45deg);
 }
-#heading .menu.open .three {
+#heading .menu-icon.open .three {
     top: 50%;
     animation: menuIcon-trans3 1s ease ;
     transform: rotate(45deg);
@@ -538,11 +538,10 @@
     }
     .menu-modal.open,
     .nav-mini .menu-items.open,
-    #heading .menu,
-    #heading .menu {
+    #heading .menu-icon {
         display: block;
     }
-    .menu.open {
+    .menu-icon.open {
         animation: menuIcon-move 0.6s ease;
     }
     .nav-mini .homepage {
@@ -619,6 +618,10 @@
 /* PC */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    #heading .top,
+    #heading .bottom {
+        padding: 10px 5%;
+    }
     .filter .menu ul li span{
         font-size: 25px;
         font-weight: 500;

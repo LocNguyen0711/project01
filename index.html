@@ -53,7 +53,7 @@
             <a href="#" class="textNodecor homepage">Trang chủ</a>
             <div class="menu-modal">
             </div>
-            <div class="menu">
+            <div class="menu-icon">
                 <div class="one">
                     <span></span>
                 </div>
@@ -104,7 +104,7 @@
                 <div class="baseworks">
                     <select class="basework">
                         <option value="dn">Đà Nẵng</option>
-                        <option value="hn">Hà NộiNội</option>
+                        <option value="hn">Hà Nội</option>
                     </select>
                     <button class="btnshowlist" type="button"><i class="ti-angle-double-down"></i></button>
                 </div>
@@ -115,14 +115,14 @@
                 <div class="icon-decor"><i class="ti-new-window"></i></div>
                 <div class="branche">
                     <ul class="flex yCenter xCenter mglrAuto lstNostyle">
-                        <li><a href="#" class="textNodecor">Thai Market 183 Nguyễn Văn Thoại</a></li>
-                        <li><a href="#" class="textNodecor">Thai Market 17 Lê Hồng Phong</a></li>
-                        <li><a href="#" class="textNodecor">Thai Market 04 Trần Quốc Toản</a></li>
-                        <li><a href="#" class="textNodecor">Thai Market 43 Bình Minh 5</a></li>
-                        <li><a href="#" class="textNodecor">Thai Market 46 Thái Phiên</a></li>
-                        <li><a href="#" class="textNodecor">Thai Market Bà Nà Hills</a></li>
-                        <li><a href="#" class="textNodecor">Thai Market Hội An</a></li>
-                        <li><a href="#" class="textNodecor">Thai Market Trà Vinh</a></li>
+                        <li><a class="textNodecor">Thai Market 183 Nguyễn Văn Thoại</a></li>
+                        <li><a class="textNodecor">Thai Market 17 Lê Hồng Phong</a></li>
+                        <li><a class="textNodecor">Thai Market 04 Trần Quốc Toản</a></li>
+                        <li><a class="textNodecor">Thai Market 43 Bình Minh 5</a></li>
+                        <li><a class="textNodecor">Thai Market 46 Thái Phiên</a></li>
+                        <li><a class="textNodecor">Thai Market Bà Nà Hills</a></li>
+                        <li><a class="textNodecor">Thai Market Hội An</a></li>
+                        <li><a class="textNodecor">Thai Market Trà Vinh</a></li>
                     </ul>
                 </div>
                 <div class="filter">
@@ -287,9 +287,13 @@
     </div>
 </body>
 <script>
-    const menuBar = document.querySelector('.menu') 
+    // Consts
+    const menuBar = document.querySelector('.menu-icon')
+    const menuMontron = document.querySelector('.montron') 
+    const menuChoseDisplay = document.querySelectorAll('.menu')
     const menuModal = document.querySelector('.menu-modal')
     const menuItems = document.querySelector('.menu-items')
+    // Funtions
     menuBar.addEventListener("click", function () {
         menuBar.classList.toggle("open")
         menuItems.classList.toggle("open")
@@ -301,6 +305,7 @@
         menuItems.classList.remove("open")
         menuModal.classList.remove("open")
     })
+    // Chosse 
 </script>
 
 </html>
