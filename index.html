@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Phần Heading -->
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant</title>
 </head>
+<!-- Phần boddy -->
 
 <body>
     <div id="heading">
@@ -77,7 +79,7 @@
                 </ul>
             </div>
         </div>
-        </div>
+    </div>
     </div>
     <div id="main">
         <div class="slide">
@@ -87,20 +89,25 @@
             </div>
             <img src="static/img/cong.png" alt="cong" width="100%">
         </div>
+        <!-- Begin Container -->
         <div class="container">
+            <!-- Begin About us -->
             <div class="about us">
                 <h1 class="heading">Về chúng tôi</h1>
                 <p class="sub-heading">cuộc hành trình của chúng tôi</p>
                 <div class="icon-decor"><i class="ti-new-window"></i></div>
                 <a href="#" class="textNodecor xemthem">xem thêm <i class="ti-arrow-right"></i></a>
             </div>
+            <!-- Content of About us -->
             <div class="flex justifySB xCenter content">
+                <!-- Some texts -->
                 <div class="texts">
                     <h1>Hệ thống nhà hàng</h1>
                     <a>
                         “Thai Market Delicious food Cooked With Lots Of Love and Care”
                     </a>
                 </div>
+                <!-- Branchs of the company -->
                 <div class="baseworks">
                     <select class="basework">
                         <option value="dn">Đà Nẵng</option>
@@ -109,12 +116,56 @@
                     <button class="btnshowlist" type="button"><i class="ti-angle-double-down"></i></button>
                 </div>
             </div>
+            <div class="branches-details">
+                <div class="danang">
+                    <ul class="flex lstNostyle">
+                        <li>
+                            <img src="static/img/chinhanhlehongphong.png" alt="lehongphong" class="chinhanh mot">
+                            <span class="address one">
+                                <h1 class="heading">thái market lê hồng phong</h1>
+                                <p class="sub-heading">17 Lê Hồng Phong, Đà Nẵng</p>
+                            </span>
+                        </li>
+                        <li>
+                            <img src="static/img/chinhanhnguyenvanthoai.png" alt="nguyenvanthoai" class="chinhanh hai">
+                            <span class="address two">
+                                <h1 class="heading">thái market 183 nguyễn văn thoại</h1>
+                                <p class="sub-heading">183 Nguyễn Văn Thoại, Đà Nẵng</p>
+                            </span>
+                        </li>
+                        <li>
+                            <img src="static/img/chinhnhanhthaiphien.png" alt="thaiphien" class="chinhanh ba">
+                            <span class="address three">
+                                <h1 class="heading">thái market 46 thái phiên</h1>
+                                <p class="sub-heading">46 Thái Phiên, Đà Nẵng</p>
+                            </span>
+                        </li>
+                        <!-- <li>
+                            <img src="static/img/chinhanhbanahill.png" alt="banahill" class="chinhanh ba">
+                            <span class="address one">
+                                <h1 class="heading">thái market sun word bana hill</h1>
+                                <p class="sub-heading">Sun Word Bana Hill, Đà Nẵng</p>
+                            </span>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="hoian">
+
+                </div>
+                <div class="flex justifySB icons">
+                    <i class="ti-arrow-left"></i>
+                    <i class="ti-arrow-right"></i>
+                </div>
+            </div>
+            <div class="sales-banner">
+                <img src="static/img/sale-event.png" alt="sale-event" width="100%">
+            </div>
             <div class="about menus">
                 <h1 class="heading">Thực đơn</h1>
                 <p class="sub-heading">CÁC MÓN ĂN LÀM NÊN THƯƠNG HIỆU CỦA CHÚNG TÔI</p>
                 <div class="icon-decor"><i class="ti-new-window"></i></div>
-                <div class="branche">
-                    <ul class="flex yCenter xCenter mglrAuto lstNostyle">
+                <div class="branche flex">
+                    <ul class="flex yCenter xCenter mglrAuto lstNostyle flex">
                         <li><a class="textNodecor">Thai Market 183 Nguyễn Văn Thoại</a></li>
                         <li><a class="textNodecor">Thai Market 17 Lê Hồng Phong</a></li>
                         <li><a class="textNodecor">Thai Market 04 Trần Quốc Toản</a></li>
@@ -127,22 +178,23 @@
                 </div>
                 <div class="filter">
                     <span class="flex yCenter mglrAuto choose">
-                        <select  spellcheck="false" data-ms-editor="true" class="textNodecor chose" onchange="menuChanged(this)">                   
-                            <option value="montron">Món trộn</option>
-                            <option value="monchienxao">Món chiên & xào</option>
-                            <option value="monkhaivi">Món khai vị</option>
-                            <option value="moncanh">Món canh</option>
+                        <select spellcheck="false" data-ms-editor="true" class="textNodecor chose"
+                            onchange="menuChanged(this)">
+                            <option value="tron">Món trộn</option>
+                            <option value="chienxao">Món chiên & xào</option>
+                            <option value="khaivi">Món khai vị</option>
+                            <option value="canh">Món canh</option>
                             <option value="comchien">Cơm chiên & mì</option>
                             <option value="carilau">Cà ri và lẩu</option>
-                            <option value="monchay">Món chay</option>
-                            <option value="monankem">Món ăn kèm thêm</option>
-                            <option value="trangmiengvadouongthai">Tráng miệng và đồ uống Thái</option>
-                            <option value="softdrinkbear">Soft drink and Bear</option>       
+                            <option value="chay">Món chay</option>
+                            <option value="ankem">Món ăn kèm thêm</option>
+                            <option value="trangmieng">Tráng miệng và đồ uống Thái</option>
+                            <option value="douongnhe">Soft drink and Bear</option>
                         </select>
                         <button class="btnshowlist" type="button"><i class="ti-angle-double-down"></i></button>
                     </span>
                     <div class="menus">
-                        <div class="flex menu montron">
+                        <div class="flex menu tron">
                             <ul class="left">
                                 <li>
                                     <span class="name" href="#">1. Gỏi tôm sống</span>
@@ -271,7 +323,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="flex menu monchienxao">
+                        <div class="flex menu chienxao">
                             <ul class="left">
                                 <li>
                                     <span class="name" href="#">1. Đậu đũa xào dầu hào</span>
@@ -302,11 +354,13 @@
                                 </li>
                                 <li>
                                     <span class="name" href="#">3. Rau muống xào</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#"></span>
                                     <ul class="type">
                                         <li>
-                                            <span class="name" href="#">Tôm khô mắm ruốc  </span>
+                                            <span class="name" href="#">Tôm khô mắm ruốc </span>
                                             <img src="static/img/gn.svg" alt="ngang">
-                                            <span class="prices" href="#">75.000 đ</span>
+                                            <span class="prices" href="#">65.000 đ</span>
                                         </li>
                                         <li>
                                             <span class="name" href="#">Tỏi</span>
@@ -316,16 +370,16 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <span class="name" href="#">4. Rau muống xào</span>
+                                    <span class="name" href="#">4. Sụn heo xóc tỏi</span>
                                     <img src="static/img/gn.svg" alt="ngang">
-                                    <span class="prices" href="#">95.000 đ</span>
+                                    <span class="prices" href="#">70.000 đ</span>
                                 </li>
                             </ul>
                             <ul class="right">
                                 <li>
                                     <span class="name" href="#">5. Xào lá Basil</span>
                                     <img src="static/img/gn.svg" alt="ngang">
-                                    <span class="prices" href="#"></span>  
+                                    <span class="prices" href="#"></span>
                                     <ul class="type">
                                         <li>
                                             <span class="name" href="#">Heo</span>
@@ -350,57 +404,360 @@
                                     <span class="prices" href="#">90.000 đ</span>
                                 </li>
                                 <li>
-                                    <span class="name" href="#">7. Khoai tây và cá tẩm bột chiên giòn</span>
+                                    <span class="name" href="#">8. Khoai tây và cá tẩm bột chiên giòn</span>
                                     <img src="static/img/gn.svg" alt="ngang">
                                     <span class="prices" href="#">70.000 đ</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex menu khaivi">
+                            <ul class="left">
+                                <li>
+                                    <span class="name" href="#">1. Phồng tôm</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#">10.000 đ</span>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">2. Khoai tây chiên</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#">40.000 đ</span>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">3. Khoai sọ Lệ phố</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#">40.000 đ</span>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">4. Chả giò</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#">55.000 đ</span>
+                                </li>
+                            </ul>
+                            <ul class="right">
+                                <li>
+                                    <span class="name" href="#">5. Chả bắp</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#">70.000 đ</span>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">6. Chả cá Thái Lan</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#">70.000 đ</span>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">7. Cánh gà chiên chiang mai</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#">70.000 đ</span>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">8. Chả tôm</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#">85.000 đ</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex menu canh">
+                            <ul class="left">
+                                <li>
+                                    <span class="name" href="#">1. Canh tom yum</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#"></span>
+                                    <ul class="type">
+                                        <li>
+                                            <span class="name" href="#">Vẹm xanh</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">150.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Hải sản</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">90.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Tôm</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">80.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Nghêu</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">85.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Gà</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">70.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Cá</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">70.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Rau</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">60.000 đ</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="right">
+                                <li>
+                                    <span class="name" href="#">2. Canh chua cay</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#"></span>
+                                    <ul class="type">
+                                        <li>
+                                            <span class="name" href="#">Sườn heo</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">90.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Gân bò</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">80.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Cá</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">70.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Chả bò viên</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">80.000 đ</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">3. Khoai sọ Lệ phố</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#"></span>
+                                    <ul class="type">
+                                        <li>
+                                            <span class="name" href="#">Tôm</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">90.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Gà</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">80.000 đ</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex menu comchien">
+                            <ul class="left">
+                                <li>
+                                    <span class="name" href="#">1. Cơm chiên trái thơm</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#"></span>
+                                    <ul class="type">
+                                        <li>
+                                            <span class="name" href="#">Hải sản</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">900.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Gà</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">75.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Rau</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">70.000 đ</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">2. Phở xào kiểu thái</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#"></span>
+                                    <ul class="type">
+                                        <li>
+                                            <span class="name" href="#">Thai Market</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">100.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Thập cẩm</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">90.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Hải sản</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">85.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Heo</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">70.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Gà</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">70.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Nấm</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">70.000 đ</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">3. Mỳ spaghetti xào cà ri đỏ</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#"></span>
+                                    <ul class="type">
+                                        <li>
+                                            <span class="name" href="#">Tôm</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">95.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Gà</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">95.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Rau</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">80.000 đ</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="right">
+                                <li>
+                                    <span class="name" href="#">4. Cơm chiên</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#"></span>
+                                    <ul class="type">
+                                        <li>
+                                            <span class="name" href="#">Hải sản</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">75.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Trứng</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">40.000 đ</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">5. Cơm chiên ruốc Thái</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#"></span>
+                                    <ul class="type">
+                                        <li>
+                                            <span class="name" href="#">Thai Market</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">85.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Hải sản</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">75.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Lạp sưởng</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">70.000 đ</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">6. Miến tôm tay cầm</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#">90.000 đ</span>
+                                </li>
+                                <li>
+                                    <span class="name" href="#">7. Mỳ xào</span>
+                                    <img src="static/img/gn.svg" alt="ngang">
+                                    <span class="prices" href="#"></span>
+                                    <ul class="type">
+                                        <li>
+                                            <span class="name" href="#">Thập cẩm</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">90.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Thập cẩm</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">85.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Heo</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">70.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Gà</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">70.000 đ</span>
+                                        </li>
+                                        <li>
+                                            <span class="name" href="#">Nấm</span>
+                                            <img src="static/img/gn.svg" alt="ngang">
+                                            <span class="prices" href="#">70.000 đ</span>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="about contact">
+            <div class="about contact">
                 <h1 class="heading">Về chúng tôi</h1>
                 <p class="sub-heading">cuộc hành trình của chúng tôi</p>
                 <div class="icon-decor"><i class="ti-new-window"></i></div>
                 <a href="#" class="textNodecor xemthem">xem thêm <i class="ti-arrow-right"></i></a>
-            </div> -->
+            </div>
         </div>
     </div>
     <div id="footer">
 
     </div>
 </body>
+<!-- Phần JavaScript -->
 <script>
     // Consts
     const menuBar = document.querySelector('.menu-icon')
-    const menuMontron = document.querySelector('.montron') 
-    const menuMonchienxao = document.querySelector('.monchienxao')
-    const menuChoseDisplay = document.querySelectorAll('.menu')
-    const menuModal = document.querySelector('.menu-modal')
     const menuItems = document.querySelector('.menu-items')
-    // Funtions
+    const menuModal = document.querySelector('.menu-modal')
+    // toogle functions
     menuBar.addEventListener("click", function () {
         menuBar.classList.toggle("open")
         menuItems.classList.toggle("open")
-        menuModal.classList.toggle("open") 
+        menuModal.classList.toggle("open")
     })
-    menuModal.addEventListener("click", function(){
-        menuModal.classList .remove("open")
+    // remove functions
+    menuModal.addEventListener("click", function () {
+        menuModal.classList.remove("open")
         menuBar.classList.remove("open")
         menuItems.classList.remove("open")
         menuModal.classList.remove("open")
     })
-    // Chosse 
-    menuMontron.classList.add("open")
-    function menuChanged(obj){
-        if(obj.value == 'montron'){
-            menuMontron.classList.add("open")
-            menuMonchienxao.classList.remove("open")
-        }
-        else if(obj.value == 'monchienxao'){
-            menuMontron.classList.remove("open")
-            menuMonchienxao.classList.add("open")
+    // Chose an menu to display
+    const listSelect = document.querySelector('.chose')
+    const listChose = ['tron', 'chienxao', 'khaivi', 'canh', 'comchien', 'carilau', 'chay', 'ankem', 'trangmieng', 'douongnhe']
+    var menuDisplay = document.querySelector('.' + listChose[0])
+    menuDisplay.classList.add('open')
+    function menuChanged(obj) {
+        var menuSelected = obj.value
+        for (i in listChose) {
+            if (menuSelected == listChose[i]) {
+                menuDisplay.classList.remove('open')
+                menuDisplay = document.querySelector('.' + listChose[i])
+                menuDisplay.classList.add('open')
+            }
         }
     }
 </script>

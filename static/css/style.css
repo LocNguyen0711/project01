@@ -108,7 +108,12 @@
     background-color: var(--content-color);
 }
 /* Menu minisize */
+.tron,
+.canh,
+.khaivi,
 .menu-modal,
+.comchien,
+.chienxao,
 #heading .menu-icon,
 .nav-mini .menu-items,
 #heading .menu-icon.open .two,
@@ -200,7 +205,7 @@
     padding-top: 40%;
     background: url(https://thaimarket.vn/uploads/gallery/full_img-01-1573182450.jpg) top /cover no-repeat;
 }
-.icons {
+.slide .icons {
     position: absolute;
     top: 50%;
     left: 0;
@@ -217,7 +222,7 @@
 }
 /* Container */
 #main .container {
-
+    overflow: hidden;
 }
 /* About */
 .container .about {
@@ -260,6 +265,7 @@
     color: var(--content-color);
     font-family: 'Avenb'!important;
 }
+/* Content */
 .container .content {
     padding: 30px 0px;
     position: relative;
@@ -304,8 +310,71 @@
     outline: none;
     pointer-events: none;
     background-color: var(--content-color);
+} 
+.branches-details {
+    position: relative;
+    width: 100%;
 }
-
+.branches-details .icons {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+    color: #fff;
+}
+.icons .ti-arrow-right,
+.icons .ti-arrow-left {
+    font-size: 30px;
+    padding: 70px 20px;
+    background-color: var(--content-color);
+}
+.icons .ti-arrow-right{
+    padding-right: 40px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+.icons .ti-arrow-left {
+    padding-left: 40px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.branches-details img {
+    display: block;
+    width: 100%;
+}
+.branches-details .address {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 30px;
+    width: calc(100%/3);
+    background: url('../img/nennh.svg') bottom/cover no-repeat;
+}
+.branches-details .address.two {
+    margin-left: calc(100%/3);
+}
+.branches-details .address.three {
+    margin-left: calc(100%/3*2);
+}
+.branches-details .address .heading {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: 'Avenb';
+    color: var(--content-color);
+}
+.branches-details .address .sub-heading {
+    font-family: 'Avenm';
+    font-size: 20px;
+}
+.branches-details ul li {
+    width: 100%;
+}
+.branches-details .sales-banner {
+    position: relative;
+}
 /* Branches */
 .container .about.menus ul{
     flex-wrap: wrap;
@@ -369,12 +438,11 @@
     background-color: var(--content-color);
 }
 /* Menus */
-.monchienxao,
-.montron {
-    display: none;
-}
-.monchienxao.open,
-.montron.open {
+.chienxao.open,
+.comchien.open,
+.khaivi.open,
+.canh.open,
+.tron.open {
     display: flex;
 }
 .filter .menus {
@@ -413,13 +481,12 @@
     width: 100%;
     padding-left:15%
 }
+.filter .menu ul li img {
+    padding-top: 5%;
+}
 .filter .menu .right,
 .filter .menu .left {
     padding: 0 15px;
-}
-.filter .menu .right {
-    
-    
 }
 
 #footer{
@@ -462,53 +529,9 @@
         transform: rotate(45deg);
     }
 }
-/* Mobile */
-@media screen and (max-width:20em){
-    #heading .logo {
-        width: 100%;
-        margin-left: 10px;
-    }
-    .nav-mini .homepage {
-        display: none!important;
-    }
-}
-@media screen and (max-width: 26em) {
-    .about.menus .branche li {
-        width: 100%!important;
-    }
-}
-@media screen and (max-width: 37.5em) {
-    #main .branche ul li {
-        font-size: 13px;
-    }
-    #main .filter .menus img{
-        width:100%;
-    }
-    #main .filter .menus span{
-        font-size: 18px;
-        font-weight: 500;
-    }
-    .filter .menus .menu {
-        width: 100%;
-        background: none;
-        flex-direction: column;
-    }
-    .filter .menu li {
-        padding: 10px 0;
-    }
-    .filter .menu li ul li span{
-        margin-left: 15px;
-    }
-    .filter .menus .menu .name {
-        left: 0;
-    }
-    .filter .menus .menu .prices { 
-        right: 0;
-        position: absolute;
-    }
-}
+/* Media Query */
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 37.6em) {
+@media only screen and (min-width: 600px) {
     .filter .menu .left .name{
         position: absolute;
         left: 0;
@@ -539,41 +562,97 @@
         margin: 15px 0;
     }
 }
-@media screen and (max-width: 63em) {
-    #heading .bottom,
-    #heading .top {
-        display: none;
-    }
-    .menu-modal.open,
-    .nav-mini .menu-items.open,
-    #heading .menu-icon {
-        display: block;
-    }
-    .menu-icon.open {
-        animation: menuIcon-move 0.6s ease;
-    }
-    .nav-mini .homepage {
-        display: block;
-    }
-}
-@media screen and (max-width: 46em){
+/* Smartphones (landscape) */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
     .about.menus .branche li {
-        width: calc(33.33333%);
+        width: calc(90%/2);
+    }
+    .about.menus .branche ul{
+        justify-content: space-between;
     }
     
 }
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 48em) {
-    .about.menus .branche li {
-        width: calc(100%/5);
-    }
 
-}
-/* < 768 */
-@media screen and (max-width: 767px){
-    .container .content {
-        
+/* Smartphones (portrait) */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+    #heading .logo {
+        width: 90%;
+        padding-top: 10px;
     }
+    .homepage {
+        display: none!important;
+    }
+}
+
+/* iPads*/
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) {
+/* Styles */
+    .container .baseworks {
+        margin-right: 2%;
+    }
+    .container .content .texts {
+        margin-left: 2%;
+        width: 50%;
+    }
+    .branches-details {
+        width: calc(300%/3);
+    }
+}
+/* Tablet & Smartphones */
+@media screen and (max-width: 600px) {
+    #main .branche ul li {
+        font-size: 13px;
+    }
+    #main .filter .menus img{
+        width:100%;
+    }
+    #main .filter .menus span{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .filter .menus .menu {
+        width: 100%;
+        background: none;
+        flex-direction: column;
+    }
+    .filter .menu li {
+        padding: 10px 0;
+    }
+    .filter .menu li ul li span{
+        margin-left: 15px;
+    }
+    .filter .menus .menu .name {
+        left: 0;
+    }
+    .filter .menus .menu .prices { 
+        right: 0;
+        position: absolute;
+    }
+    .branches-details {
+        width: 300%!important;
+    }
+    .branches-details .icons {
+        display: none;
+    }
+}
+/* Smartphones */
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 480px) {
+/* Styles */
+    .about.menus .branche li {
+        width: 100%!important;
+    }
+}
+
+/* < Ipads */
+@media screen and (max-width: 767px) {
     .container .content .texts h1 {
         font-size: 30px;
     }
@@ -593,9 +672,38 @@
     .container .baseworks select {
         width: 100%;
     }
+    .branches-details {
+        width: 300%!important;
+    }
+    .branches-details .icons {
+        display: none;
+    }
+}
+
+/* Ipads(-Pro) and <*/
+@media screen and (max-width: 1023px) {
+    #heading .bottom,
+    #heading .top {
+        display: none;
+    }
+    .nav-mini .menu-items.open,
+    .nav-mini .homepage,
+    #heading .menu-icon,
+    .menu-modal.open {
+        display: block;
+    }
+    .menu-icon.open {
+        animation: menuIcon-move 0.6s ease;
+    }
+    .branches-details {
+        width: calc(300%/2);
+    }
+    .branches-details .icons {
+        display: none;
+    }
 }
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 992px) {
     #heading .nav .left li {
         margin-right: 10px;
     }
@@ -613,19 +721,12 @@
         left: 10px;
         right: 10px;
     }
+
 }
-@media screen and (max-width: 1024px){
-    .container .baseworks {
-        margin-right: 2%;
-    }
-    .container .content .texts {
-        margin-left: 2%;
-        width: 50%;
-    }
-}
-/* PC */
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* Desktops and Laptops */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
     #heading .top,
     #heading .bottom {
         padding: 10px 5%;
@@ -652,4 +753,10 @@
         padding-right: 10%;
     }
     
+}
+
+/* Large Screens */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
 }
