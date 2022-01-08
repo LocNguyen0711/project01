@@ -446,11 +446,11 @@
 .chienxao.open,
 .comchien.open,
 .khaivi.open,
-.carilau,
-.chay,
-.ankem,
-.trangmieng,
-.douongnhe,
+.carilau.open,
+.chay.open,
+.ankem.open,
+.trangmieng.open,
+.douongnhe.open,
 .canh.open,
 .tron.open {
     display: flex;
