@@ -110,6 +110,11 @@
 /* Menu minisize */
 .tron,
 .canh,
+.carilau,
+.chay,
+.ankem,
+.trangmieng,
+.douongnhe,
 .khaivi,
 .menu-modal,
 .comchien,
@@ -441,6 +446,11 @@
 .chienxao.open,
 .comchien.open,
 .khaivi.open,
+.carilau,
+.chay,
+.ankem,
+.trangmieng,
+.douongnhe,
 .canh.open,
 .tron.open {
     display: flex;
