@@ -116,49 +116,56 @@
                     <button class="btnshowlist" type="button"><i class="ti-angle-double-down"></i></button>
                 </div>
             </div>
-            <div class="branches-details">
-                <div class="danang">
-                    <ul class="flex lstNostyle">
-                        <li>
-                            <img src="static/img/chinhanhlehongphong.png" alt="lehongphong" class="chinhanh mot">
-                            <span class="address one">
-                                <h1 class="heading">thái market lê hồng phong</h1>
-                                <p class="sub-heading">17 Lê Hồng Phong, Đà Nẵng</p>
-                            </span>
-                        </li>
-                        <li>
-                            <img src="static/img/chinhanhnguyenvanthoai.png" alt="nguyenvanthoai" class="chinhanh hai">
-                            <span class="address two">
-                                <h1 class="heading">thái market 183 nguyễn văn thoại</h1>
-                                <p class="sub-heading">183 Nguyễn Văn Thoại, Đà Nẵng</p>
-                            </span>
-                        </li>
-                        <li>
-                            <img src="static/img/chinhnhanhthaiphien.png" alt="thaiphien" class="chinhanh ba">
-                            <span class="address three">
-                                <h1 class="heading">thái market 46 thái phiên</h1>
-                                <p class="sub-heading">46 Thái Phiên, Đà Nẵng</p>
-                            </span>
-                        </li>
-                        <!-- <li>
-                            <img src="static/img/chinhanhbanahill.png" alt="banahill" class="chinhanh ba">
-                            <span class="address one">
-                                <h1 class="heading">thái market sun word bana hill</h1>
-                                <p class="sub-heading">Sun Word Bana Hill, Đà Nẵng</p>
-                            </span>
-                        </li> -->
-                    </ul>
+            <div class="branche-slides">
+                <div class="cols controls">
+                    <div class="prev ti-angle-double-left"></div>
+                    <div class="next ti-angle-double-right"></div>
                 </div>
-                <div class="hoian">
-
-                </div>
-                <div class="flex justifySB icons">
-                    <i class="ti-arrow-left"></i>
-                    <i class="ti-arrow-right"></i>
+                <div class="flex lstNostyle slides-content">
+                    <span class="slide-item">
+                        <img src="static/img/chinhanhbanahill.png" alt="banahill">
+                        <div class="content">
+                            <h1>thai nguyen</h1>
+                            <a>47 Thai Nguyen, Da Nang</a>
+                        </div>
+                        <img src="static/img/nennh.svg" alt="hinhnen" class="background-branche">
+                    </span>
+                    <span class="slide-item">
+                        <img src="static/img/chinhanhlehongphong.png" alt="banahill">
+                        <div class="content">
+                            <h1>thai nguyen</h1>
+                            <a>47 Thai Nguyen, Da Nang</a>
+                        </div>
+                        <img src="static/img/nennh.svg" alt="hinhnen" class="background-branche">
+                    </span>
+                    <span class="slide-item">
+                        <img src="static/img/chinhanhnguyenvanthoai.png" alt="banahill">
+                        <div class="content">
+                            <h1>thai nguyen</h1>
+                            <a>47 Thai Nguyen, Da Nang</a>
+                        </div>
+                        <img src="static/img/nennh.svg" alt="hinhnen" class="background-branche">
+                    </span>
+                    <span class="slide-item">
+                        <img src="static/img/chinhnhanhthaiphien.png" alt="banahill">
+                        <div class="content">
+                            <h1>thai nguyen</h1>
+                            <a>47 Thai Nguyen, Da Nang</a>
+                        </div>
+                        <img src="static/img/nennh.svg" alt="hinhnen" class="background-branche">
+                    </span>
+                    <span class="slide-item">
+                        <img src="static/img/chinhanhbanahill.png" alt="banahill">
+                        <div class="content">
+                            <h1>thai nguyen</h1>
+                            <a>47 Thai Nguyen, Da Nang</a>
+                        </div>
+                        <img src="static/img/nennh.svg" alt="hinhnen" class="background-branche">
+                    </span>
                 </div>
             </div>
-            <div class="sales-banner">
-                <img src="static/img/sale-event.png" alt="sale-event" width="100%">
+            <div class="sale-off">
+                <img src="static/img/sale-event.png" width="100%">
             </div>
             <div class="about menus">
                 <h1 class="heading">Thực đơn</h1>
@@ -718,6 +725,9 @@
                         <div class="flex menu douongnhe"></div>
                     </div>
                 </div>
+                <div class="bottommenu">
+                    <img src="static/img/mnu.svg">
+                </div>
             </div>
             <div class="about contact">
                 <h1 class="heading">Về chúng tôi</h1>
@@ -737,6 +747,11 @@
     const menuBar = document.querySelector('.menu-icon')
     const menuItems = document.querySelector('.menu-items')
     const menuModal = document.querySelector('.menu-modal')
+    const slideItems = document.querySelectorAll('.slide-item');
+    const slideMain = document.querySelector('.slides-content');
+    const btnNext = document.querySelector('.next')
+    const btnPrev = document.querySelector('.prev')
+    let index = 0
     // toogle functions
     menuBar.addEventListener("click", function () {
         menuBar.classList.toggle("open")
@@ -765,6 +780,45 @@
             }
         }
     }
+    function slideClicks(i) {
+        if (i == 1) {
+            if (index == 0) {
+                slideMain.style.transition = "all 1s"
+                slideMain.style.left = `${-slideItems[index].offsetWidth * (index)}px`
+            }
+            index += i
+            if (index < slideItems.length) {
+                slideMain.style.transition = "1s"
+                slideMain.style.left = `${-slideItems[index].offsetWidth * (index)}px`
+            }
+            else {
+                index = 0
+                slideMain.style.left = `${-slideItems[index].offsetWidth * (index)}px`
+            }
+        }
+        if (i == -1) {
+            if (index == 0) {
+                slideMain.style.transition = "all 1s"
+                slideMain.style.left = `${-slideItems[index].offsetWidth * (index)}px`
+            }
+            if (index > 0) {
+                index -= 1
+                slideMain.style.transition = "1s"
+                slideMain.style.left = `${-slideItems[index].offsetWidth * (index)}px`
+            }
+            else {
+                index = slideItems.length - 1
+                slideMain.style.left = `${-slideItems[index].offsetWidth * (index)}px`
+            }
+        }
+
+    }
+    btnNext.addEventListener('click', function () {
+        slideClicks(1)
+    })
+    btnPrev.addEventListener('click', function () {
+        slideClicks(-1)
+    })
 </script>
 
 </html>

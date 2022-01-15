@@ -279,12 +279,12 @@
 .container .texts {
     margin-left: 10%;
 }
-.container .texts h1 {
+.container .texts > h1 {
     font-size: 50px;
     font-family: 'Dancing Script';
     color: var(--content-color);
 }
-.container .texts a {
+.container .texts > a {
     letter-spacing: 1.5px;
     font-family: 'Avenm';
 }
@@ -316,70 +316,86 @@
     pointer-events: none;
     background-color: var(--content-color);
 } 
-.branches-details {
+.branche-slides {
     position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
+    height: 600px;
+    overflow: hidden;
 }
-.branches-details .icons {
-    position: absolute;
-    top: 35%;
-    left: 0;
-    right: 0;
-    opacity: 0.8;
-    color: #fff;
+.slides-content {
+    position: relative;
+    width: calc(100%/3);
+    height: 100%;
 }
-.icons .ti-arrow-right,
-.icons .ti-arrow-left {
-    font-size: 30px;
-    padding: 70px 20px;
-    background-color: var(--content-color);
-}
-.icons .ti-arrow-right{
-    padding-right: 40px;
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
-}
-.icons .ti-arrow-left {
-    padding-left: 40px;
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
-}
-.branches-details img {
-    display: block;
+.branche-slides .slide-item {
+    flex: 1 0 100%;
     width: 100%;
+    height: 100%;
 }
-.branches-details .address {
-    position: absolute;
+.branche-slides .slide-items img {
+    width: 100%;
+    height: 100%;
+}
+.background-branche {
+    position:absolute;
     width: 100%;
     bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 30px 30px;
-    width: calc(100%/3);
-    background: url('../img/nennh.svg') bottom/cover no-repeat;
 }
-.branches-details .address.two {
-    margin-left: calc(100%/3);
+.branche-slides .content {
+    position: absolute;
+    bottom: 0;
+    padding: 15px 20px;
+    width: 100%;
+    z-index: 1;
+    background: none;
 }
-.branches-details .address.three {
-    margin-left: calc(100%/3*2);
-}
-.branches-details .address .heading {
+.branche-slides .content h1 {
     text-transform: uppercase;
-    font-size: 25px;
-    font-family: 'Avenb';
+    font-family: 'Avenm';
+    font-weight: 100;
+    font-size: 20px;
     color: var(--content-color);
 }
-.branches-details .address .sub-heading {
+.branche-slides .content a {
     font-family: 'Avenm';
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: 500;
 }
-.branches-details ul li {
-    width: 100%;
+.controls {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    align-items: center;
 }
-.branches-details .sales-banner {
-    position: relative;
+.ti-angle-double-right,
+.ti-angle-double-left {
+    color: rgb(12, 11, 11);
+    font-size: 40px;
+    background-color: rgba(255, 255, 255,0.5);
+    font-weight: 500;
+    text-align: center;
+    position: absolute;                             
+    padding: 10px 5px;
 }
+.ti-angle-double-right:hover,
+.ti-angle-double-left:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.ti-angle-double-right {
+    right: 0;
+    border-radius: 5px;
+}
+.ti-angle-double-left {
+    left: 0;                                
+    border-radius: 5px;
+}
+
 /* Branches */
 .container .about.menus ul{
     flex-wrap: wrap;
@@ -498,7 +514,13 @@
 .filter .menu .left {
     padding: 0 15px;
 }
-
+.bottommenu {
+    width: 100%;
+    margin-top: 15px;
+}
+.filter ul {
+    list-style-type: none;
+}
 #footer{
 
 }
@@ -582,7 +604,6 @@ and (min-width : 321px) {
     .about.menus .branche ul{
         justify-content: space-between;
     }
-    
 }
 
 /* Smartphones (portrait) */
@@ -609,9 +630,6 @@ and (max-width : 1024px) {
     .container .content .texts {
         margin-left: 2%;
         width: 50%;
-    }
-    .branches-details {
-        width: calc(300%/3);
     }
 }
 /* Tablet & Smartphones */
@@ -644,11 +662,8 @@ and (max-width : 1024px) {
         right: 0;
         position: absolute;
     }
-    .branches-details {
-        width: 300%!important;
-    }
-    .branches-details .icons {
-        display: none;
+    .slides-content {
+        width: 100%!important;
     }
 }
 /* Smartphones */
@@ -663,7 +678,7 @@ and (max-width : 480px) {
 
 /* < Ipads */
 @media screen and (max-width: 767px) {
-    .container .content .texts h1 {
+    .container .content .texts > h1 {
         font-size: 30px;
     }
     .container .content .texts {
@@ -682,11 +697,8 @@ and (max-width : 480px) {
     .container .baseworks select {
         width: 100%;
     }
-    .branches-details {
-        width: 300%!important;
-    }
-    .branches-details .icons {
-        display: none;
+    .slides-content {
+        width: 100%!important;
     }
 }
 
@@ -705,11 +717,8 @@ and (max-width : 480px) {
     .menu-icon.open {
         animation: menuIcon-move 0.6s ease;
     }
-    .branches-details {
-        width: calc(300%/2);
-    }
-    .branches-details .icons {
-        display: none;
+    .slides-content {
+        width: calc(100%/2);
     }
 }
 /* Large devices (laptops/desktops, 992px and up) */
